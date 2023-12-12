@@ -1,0 +1,31 @@
+<!doctype html public "-//w3c//dtd html 3.2//en">
+<html>
+  <head>
+  
+  </head>
+  
+  <body>
+  <script>
+  function sConsole(event) {
+  var url = document.getElementById("url");
+  var key = document.getElementById("key");
+  var value = document.getElementById("value");
+  var call = url+"?key="+key+"&value="+value
+  console.log(event); 
+	}
+  </script>
+  
+  <form action="" id="form" onsubmit="sConsole(event)">
+  <p><label>Click Button to Run GET Request</label></p>
+  <input type="hidden" name="url" value="https://httpbin.org/get">
+  <p><label>Key</label></p>
+  <input type="text" size="50" maxlength="50" name="key" value="hello" id="key">
+  <br>
+  <p><label>Value</label></p>
+  <input type="text" size="50" maxlength="50" name="value" value="world" id="value">
+  <br>
+  <p><input type="submit" value="SUBMIT" class="center"></input></p>
+  </form>
+
+  </body>
+</html>
